@@ -2,7 +2,7 @@ import random
 rock = 'Rock'
 paper = 'Paper'
 scissors = 'Scissors'
-
+fire = 'fucking fire'
 player_move = input('Choose [r]ock, [p]aper or [s]cissors: ')
 
 if player_move == 'r':
@@ -11,6 +11,8 @@ elif player_move == 'p':
     player_move = paper
 elif player_move == 's':
     player_move = scissors
+elif player_move == 'fucking fire':
+    player_move = fire
 else:
     raise SystemExit('Invalid Input, Try again...')
 
@@ -29,6 +31,8 @@ if (player_move == rock and computer_move == scissors) or\
         (player_move == paper and computer_move == rock) or\
         (player_move == scissors and computer_move == paper):
     print('You win! :)')
+elif player_move == fire:
+    print('YOU ARE A FUCKING WINNER !')
 elif player_move == computer_move:
     print('Draw! :|')
 else:
